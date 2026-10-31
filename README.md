@@ -12,7 +12,9 @@ This free toolkit helps **Codex recommend the right AI settings for your task**.
 
 You stay in control. Recommendations only become setting changes when your app supports that change and you have authorized it.
 
-**[Get the free toolkit →](https://github.com/Benz4000/workflow-value-toolkit/releases/latest)** &nbsp; · &nbsp; [Simple setup guide](INSTALL.md)
+**[Set up in Codex →](https://benz4000.github.io/workflow-value-toolkit/)** &nbsp; · &nbsp; [Setup help](INSTALL.md)
+
+Click to open a ready-to-send setup message in Codex. Press **Send**, approve setup if asked, then start a new chat. On supported local installations, Codex handles the commands for you.
 
 *Made for Codex. Free to download and reuse under the MIT license. Your usual AI service charges still apply.*
 
@@ -106,9 +108,9 @@ Use `off` to stop it, `once` for a single check, or `status` to see the remember
 
 ## Ready for less guesswork?
 
-**[Download Workflow Value Toolkit →](https://github.com/Benz4000/workflow-value-toolkit/releases/latest)**
+**[Set up Workflow Value Toolkit →](https://benz4000.github.io/workflow-value-toolkit/)**
 
-Choose **`workflow-value-toolkit-1.0.0.zip`**, then follow the [setup guide](INSTALL.md). Start with one ordinary task and tell Codex what matters to you.
+Open the setup message, press **Send**, and let Codex guide you through installation. Start with one ordinary task and tell it what matters to you. [Manual downloads](https://github.com/Benz4000/workflow-value-toolkit/releases/latest) are also available.
 
 ---
 

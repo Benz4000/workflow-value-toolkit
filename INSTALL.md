@@ -2,7 +2,28 @@
 
 Add the toolkit to Codex, then try it on a task you already have. The download is free; your usual Codex usage charges still apply.
 
-**You'll need a Codex app or CLI that supports local plugin marketplaces.** A regular ChatGPT chat alone cannot install this package. You don't need to write code, but setup currently includes two terminal commands.
+## Easiest: let Codex set it up
+
+**[Set up in Codex →](https://benz4000.github.io/workflow-value-toolkit/)**
+
+1. Click **Set up in Codex** on that page. If your browser asks whether to open Codex, choose **Open**.
+2. Codex opens with the setup message ready. Press **Send** and approve setup if your app asks.
+3. Once Codex confirms installation, start a new chat and try `$workflow-check`.
+
+On supported local installations, Codex handles the setup commands. You don't need to download a ZIP, unpack folders, or type commands into a terminal.
+
+This is a guided setup, not a silent installation. Opening the page or clicking its button does not install anything by itself. You need the Codex desktop app and support for local plugins. A regular ChatGPT web chat alone cannot install the package.
+
+### If the button doesn't open Codex
+
+Use **Copy setup message** on the setup page, paste it into a local Codex chat, and press **Send**. If the browser blocks clipboard access, the message is shown on the page so you can select and copy it yourself.
+
+If Codex reports that local plugin installation isn't supported, use the manual instructions below or [ask for help](https://github.com/Benz4000/workflow-value-toolkit/issues). Managed accounts may require approval from an administrator.
+
+<details>
+<summary><strong>Manual ZIP install: download, extract, and run two commands</strong></summary>
+
+This alternative requires a Codex CLI with local plugin marketplace support. You don't need to write code, but you will paste two commands into a terminal.
 
 ## 1. Download and unpack
 
@@ -45,6 +66,8 @@ Explain your choice in plain English.
 Codex should recommend an AI model, how much thinking the task needs, and a speed option. It should explain the choice and be clear about whether any setting actually changed.
 
 You can also find **workflow-check** under **Workflow Value Toolkit** in the skill picker. If you already have standalone copies of these skills, installation won't remove them; choose the copy you intend to use.
+
+</details>
 
 ## Make it suit you
 
@@ -107,3 +130,5 @@ Other apps that support agent skills may import the eight folders from `workflow
 </details>
 
 [Back to the toolkit](README.md) · [Detailed usage guide](workflow-value-toolkit/README.md) · [Official skill documentation](https://learn.chatgpt.com/docs/build-skills)
+
+The setup button uses the [documented Codex link format](https://learn.chatgpt.com/docs/app/commands) to prepare a message. The [installation guide for Codex](INSTALL_FOR_CODEX.md) uses supported plugin commands. The command sequence was verified in an isolated Windows test profile on October 31, 2026; this does not guarantee every app version or managed account can install plugins.

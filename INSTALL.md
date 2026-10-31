@@ -44,7 +44,34 @@ Already have the toolkit? Paste this into a local Codex chat:
 Update Workflow Value Toolkit from https://github.com/Benz4000/workflow-value-toolkit to v1.0.1. Read INSTALL_FOR_CODEX.md in that repository and inspect my existing installation first. Preserve my other skills and settings, leave the direction check off, and verify the installed version before saying the update is complete.
 ```
 
-Codex should check your installed version and source, then use the update controls your app actually supports. A marketplace refresh alone doesn't move an installation pinned to an older tag. If an update cannot be completed, keep the existing copy and use the explanation Codex provides. Don't register a second copy just to get past an error.
+Codex should check your installed version and source before updating. A marketplace refresh alone doesn't move an installation pinned to an older tag. The tested remote update path is below; local-folder and customized installations should keep their existing source.
+
+<details>
+<summary><strong>Manual update from an older remote version</strong></summary>
+
+First inspect the current source and installed version:
+
+```sh
+codex plugin marketplace list --json
+codex plugin list --json
+```
+
+Use this sequence only when `workflow-value-local` points to **Benz4000/workflow-value-toolkit on GitHub** and you intend to update it. Record the old source, ref, and any source options before proceeding so you can restore them if needed. Keep local-folder sources and custom copies unchanged.
+
+Run each command separately and stop if it fails:
+
+```sh
+codex plugin marketplace remove workflow-value-local --json
+codex plugin marketplace add Benz4000/workflow-value-toolkit --ref v1.0.1 --json
+codex plugin add workflow-value-toolkit@workflow-value-local --json
+codex plugin list --json
+```
+
+This replaces only the toolkit's marketplace registration, then installs the new version. The old plugin cache remained intact in our test; don't run `plugin remove` or remove other marketplaces. If adding the new source fails, restore the recorded source/ref with `marketplace add` and verify the old installation before retrying. If restoration fails, keep the cache and report the error instead of deleting anything.
+
+Verify that the installed plugin is **enabled at version 1.0.1**, then start a new chat. A marketplace listing alone does not prove the installed plugin was updated.
+
+</details>
 
 For a standalone skill-folder installation, compare and update the existing `workflow-check` folder and its supporting files from v1.0.1, preserving any custom edits. Restart or open a new chat as your app requires.
 
@@ -159,4 +186,4 @@ For Claude Code, Cursor, GitHub Copilot, and Gemini CLI, see the [compatibility 
 
 [Back to the toolkit](README.md) · [Detailed usage guide](workflow-value-toolkit/README.md) · [Official skill documentation](https://learn.chatgpt.com/docs/build-skills)
 
-The setup button uses the [documented Codex link format](https://learn.chatgpt.com/docs/app/commands) to prepare a message. The [installation guide for Codex](INSTALL_FOR_CODEX.md) uses supported plugin commands. Version 1.0.1 was installed and enabled from a local repository in an isolated Windows profile on October 31, 2026. Remote installation pinned to v1.0.1, updates from an older version, and live interactive setting changes have not yet been tested.
+The setup button uses the [documented Codex link format](https://learn.chatgpt.com/docs/app/commands) to prepare a message. On October 31, 2026, isolated Windows profiles passed a fresh v1.0.1 installation from a local repository and a remote update from v1.0.0 to the published v1.0.1 tag. The updated plugin was installed and enabled with all eight skills; the direction check retained explicit-only activation. Live interactive setting changes have not been tested.

@@ -1,12 +1,12 @@
 # Compatibility: Codex first, other AI tools by manual adaptation
 
-**Codex is the primary supported experience.** Version 1.0.1 was installed and enabled from a local repository in an isolated Windows Codex profile on October 31, 2026. Remote installation pinned to v1.0.1, updates from an older version, and live interactive setting changes have not yet been tested. An installation check does not guarantee every recommendation's quality.
+**Codex is the primary supported experience.** A fresh v1.0.1 installation from a local repository and remote update from v1.0.0 to the published v1.0.1 tag passed in isolated Windows profiles on October 31, 2026. The updated plugin was installed and enabled with all eight skills and explicit-only direction-check metadata. Live interactive setting changes remain untested; installation checks do not guarantee every recommendation's quality.
 
 Claude Code, Cursor, GitHub Copilot in VS Code, and Gemini CLI document support for `SKILL.md` files. The paths below are based on their official documentation, checked October 31, 2026. **This toolkit has not been tested in those apps.** Manual adjustments may be needed.
 
 | App | Status | Installation route |
 |---|---|---|
-| **OpenAI Codex** | **Primary · v1.0.1 local install tested** | [Guided setup](https://benz4000.github.io/workflow-value-toolkit/) or [CLI, ZIP, and Git instructions](INSTALL.md#manual-installation) |
+| **OpenAI Codex** | **Primary · v1.0.1 install and update tested** | [Guided setup](https://benz4000.github.io/workflow-value-toolkit/) or [CLI, ZIP, and Git instructions](INSTALL.md#manual-installation) |
 | Claude Code | Manual adaptation · untested | Skill folders in `.claude/skills/` |
 | Cursor | Manual adaptation · untested | Skill folders in `.cursor/skills/` |
 | GitHub Copilot in VS Code | Manual adaptation · untested | Skill folders in `.github/skills/` |

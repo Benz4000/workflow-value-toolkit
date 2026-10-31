@@ -108,11 +108,11 @@ Use `off` to stop it, `once` for a single check, or `status` to see the remember
 
 ## Codex first. Options for other AI tools.
 
-**Codex is the primary supported experience.** Version 1.0.1 was installed and enabled from a local source in an isolated Windows Codex profile on October 31, 2026. Claude Code, Cursor, GitHub Copilot in VS Code, and Gemini CLI document support for skill files, so we include manual import guidance for them. This toolkit has not been tested in those four apps.
+**Codex is the primary supported experience.** A fresh local v1.0.1 installation and remote update from v1.0.0 passed in isolated Windows profiles on October 31, 2026. Live setting changes remain untested. Claude Code, Cursor, GitHub Copilot in VS Code, and Gemini CLI document support for skill files, so we include manual import guidance for them. This toolkit has not been tested in those four apps.
 
 | Your app | Toolkit status | Get started |
 |---|---|---|
-| **OpenAI Codex** | **Primary · v1.0.1 local install tested** | [Guided setup](https://benz4000.github.io/workflow-value-toolkit/) or [manual install](INSTALL.md#manual-installation) |
+| **OpenAI Codex** | **Primary · v1.0.1 install and update tested** | [Guided setup](https://benz4000.github.io/workflow-value-toolkit/) or [manual install](INSTALL.md#manual-installation) |
 | Claude Code | Manual adaptation · toolkit untested | [Claude Code notes](COMPATIBILITY.md#claude-code) |
 | Cursor | Manual adaptation · toolkit untested | [Cursor notes](COMPATIBILITY.md#cursor) |
 | GitHub Copilot in VS Code | Manual adaptation · toolkit untested | [GitHub Copilot notes](COMPATIBILITY.md#github-copilot) |

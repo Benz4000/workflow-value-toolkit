@@ -41,11 +41,22 @@ If the short command is not recognized, point to **Workflow Value Toolkit** in t
 
 ## Existing installations
 
-For an older version of this same toolkit, treat an explicit update request or this setup request as targeting `v1.0.1`. Inspect the installed CLI's help or equivalent supported plugin controls for the actual update path. Preserve the current working copy until a replacement is ready; do not overwrite another source, edit unrelated configuration, or create duplicate registrations to force success.
+For an older version of this same toolkit, an explicit update request or this sent setup request targets `v1.0.1`. Inspect `codex plugin marketplace list --json` and `codex plugin list --json`. Confirm `workflow-value-local` is the Git source `https://github.com/Benz4000/workflow-value-toolkit.git` (or its equivalent repository URL), not a local folder or different repository. Record the old source, ref, source options, installed version, and cache path before changing the registration. If the ref is not exposed, inspect supported source controls rather than guessing it.
 
-`codex plugin marketplace upgrade workflow-value-local --json` is a documented refresh of a configured Git marketplace snapshot. It does **not** by itself establish a move from a source pinned to `v1.0.0` to `v1.0.1`, nor prove that the installed plugin changed. Do not present it as a complete update command. Verify the source/ref and installed version after any supported update action. If changing the pinned source is not supported by the available controls, explain the limitation and leave the working installation intact.
+For that confirmed remote source, the following update from v1.0.0 passed in an isolated Windows profile on October 31, 2026. Run sequentially, inspect every result, and stop on failure:
 
-For a local-folder marketplace, respect that source. Explain the targeted package-file update needed instead of silently switching it to a remote source. Preserve standalone skills and custom edits.
+```sh
+codex plugin marketplace remove workflow-value-local --json
+codex plugin marketplace add Benz4000/workflow-value-toolkit --ref v1.0.1 --json
+codex plugin add workflow-value-toolkit@workflow-value-local --json
+codex plugin list --json
+```
+
+Changing the ref with `marketplace add` alone was rejected as an already-registered different source. `marketplace upgrade` only refreshes the configured snapshot. The tested sequence replaces the one marketplace registration and preserves the old plugin cache; do not run `plugin remove`, remove other marketplaces, or edit broad configuration.
+
+If the new source cannot be added, restore the recorded source/ref and options with the supported `marketplace add` command, then verify the previous installation. If restoring fails, retain the cache and report both errors. Do not claim an update until the installed plugin is enabled at version `1.0.1`, with all eight skill directories and the direction check's explicit-only metadata intact.
+
+For a local-folder marketplace, preserve that source and custom files. Explain the targeted package-file update needed instead of switching it to a remote source. Preserve standalone skills and custom edits. This guide does not authorize upgrading unrelated plugins or activating the direction check.
 
 ## If setup cannot finish
 

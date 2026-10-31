@@ -14,7 +14,7 @@ You stay in control. Recommendations only become setting changes when your app s
 
 **[Set up in Codex →](https://benz4000.github.io/workflow-value-toolkit/)** &nbsp; · &nbsp; [Setup help](INSTALL.md)
 
-Click to open a ready-to-send setup message in Codex. Press **Send**, approve setup if asked, then start a new chat. On supported local installations, Codex handles the commands for you.
+Open the setup page, then click **Set up in Codex**. Press **Send**, approve setup if asked, then start a new chat. On supported local installations, Codex handles the commands for you.
 
 *Made for Codex. Free to download and reuse under the MIT license. Your usual AI service charges still apply.*
 

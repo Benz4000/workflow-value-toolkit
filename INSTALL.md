@@ -18,7 +18,7 @@ This is a guided setup, not a silent installation. Opening the page or clicking 
 
 Use **Copy setup message** on the setup page, paste it into a local Codex chat, and press **Send**. If the browser blocks clipboard access, the message is shown on the page so you can select and copy it yourself.
 
-If Codex reports that local plugin installation isn't supported, use the manual instructions below or [ask for help](https://github.com/Benz4000/workflow-value-toolkit/issues). Managed accounts may require approval from an administrator.
+If the guided setup has trouble but your app supports local plugins, try the manual instructions below. If Codex reports that local plugin installation isn't supported, [ask for help](https://github.com/Benz4000/workflow-value-toolkit/issues). Managed accounts may require help from an administrator.
 
 <details>
 <summary><strong>Manual ZIP install: download, extract, and run two commands</strong></summary>

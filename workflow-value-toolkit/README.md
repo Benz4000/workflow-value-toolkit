@@ -36,6 +36,14 @@ The evaluator considers all supported combinations of model, effort, and Standar
 
 A recommendation is provisional unless task measurements support it. Dated model/rate examples in the reference are orientation only. The skill checks current sources when needed and labels unavailable or unverified controls. A skill cannot change runtime settings simply by announcing a model name.
 
+## Apply or keep your current setup
+
+Version 1.0.1 offers **Apply suggested settings** and **Keep current settings** after startup checks, manual reevaluations, and meaningful reevaluations triggered by an enabled direction check. The agent first shows the recommended model, effort, and speed, a brief reason, and any known cost or control limitation.
+
+It uses a supported interactive choice when available, otherwise a plain question. Selecting Apply authorizes only the stated, supported settings for the current task or chat. If direct controls are absent, the prompt explains that Apply will provide manual steps. Unchanged pending or declined suggestions are not repeatedly prompted; a manual recheck can offer the choice again. An already verified matching setup needs no change.
+
+The agent continues authorized work with the current settings while a response is pending. A preselected option, silence, or elapsed time is not acceptance. After an accepted change it distinguishes recommended settings, requested changes, and verified active settings, including partial success. It does not alter global defaults or stop another chat to apply a recommendation.
+
 ## Package behavior
 
 The package contains skills, manifests, an icon, and documentation only. It contains no polling hooks, timers, MCP connections, or executable installation scripts. It does not edit the user's startup guidance. An optional startup-rule snippet is included with the install instructions; the direction detector remains separately opt-in.

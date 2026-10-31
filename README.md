@@ -58,6 +58,14 @@ Then describe your own job in place of the email. You can ask for more care, a l
 
 You don't need to memorize the commands. You can also choose **workflow-check** from Codex's skill picker. A “skill” is simply a reusable set of instructions that helps Codex handle a particular job.
 
+## A recommendation. Your choice.
+
+With **v1.0.1**, a check offers **Apply suggested settings** or **Keep current settings** when a change is worth considering. You'll see the suggested AI model, thinking level, and speed before choosing.
+
+This works after a startup check, a check you request, or a meaningful automatic reevaluation when the optional change-of-plan check is on. The agent uses clickable choices where the app supports them, and a short question otherwise. It avoids repeating an unchanged suggestion you've already declined.
+
+**Apply** only changes settings through supported controls. If the agent can't change a setting directly, it tells you before you choose and provides the manual steps. It reports what actually changed; clicking doesn't unlock unavailable controls or change global defaults. [Update an existing installation](INSTALL.md#updating-an-existing-installation).
+
 ## Eight tools, one sensible starting point
 
 Start with the main check. The other tools are there when you want more control.
@@ -100,11 +108,11 @@ Use `off` to stop it, `once` for a single check, or `status` to see the remember
 
 ## Codex first. Options for other AI tools.
 
-**Codex is the primary supported experience.** The installation was tested in an isolated Codex profile. Claude Code, Cursor, GitHub Copilot in VS Code, and Gemini CLI document support for skill files, so we include manual import guidance for them. This toolkit has not been tested in those four apps.
+**Codex is the primary supported experience.** Version 1.0.1 was installed and enabled from a local source in an isolated Windows Codex profile on October 31, 2026. Claude Code, Cursor, GitHub Copilot in VS Code, and Gemini CLI document support for skill files, so we include manual import guidance for them. This toolkit has not been tested in those four apps.
 
 | Your app | Toolkit status | Get started |
 |---|---|---|
-| **OpenAI Codex** | **Primary · installation tested** | [Guided setup](https://benz4000.github.io/workflow-value-toolkit/) or [manual install](INSTALL.md#manual-installation) |
+| **OpenAI Codex** | **Primary · v1.0.1 local install tested** | [Guided setup](https://benz4000.github.io/workflow-value-toolkit/) or [manual install](INSTALL.md#manual-installation) |
 | Claude Code | Manual adaptation · toolkit untested | [Claude Code notes](COMPATIBILITY.md#claude-code) |
 | Cursor | Manual adaptation · toolkit untested | [Cursor notes](COMPATIBILITY.md#cursor) |
 | GitHub Copilot in VS Code | Manual adaptation · toolkit untested | [GitHub Copilot notes](COMPATIBILITY.md#github-copilot) |

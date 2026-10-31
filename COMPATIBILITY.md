@@ -1,12 +1,12 @@
 # Compatibility: Codex first, other AI tools by manual adaptation
 
-**Codex is the primary supported experience.** Installation of all eight skills was verified in an isolated Windows Codex profile. The optional direction check stayed off. This is an installation check, not a guarantee of every recommendation's quality.
+**Codex is the primary supported experience.** Version 1.0.1 was installed and enabled from a local repository in an isolated Windows Codex profile on October 31, 2026. Remote installation pinned to v1.0.1, updates from an older version, and live interactive setting changes have not yet been tested. An installation check does not guarantee every recommendation's quality.
 
 Claude Code, Cursor, GitHub Copilot in VS Code, and Gemini CLI document support for `SKILL.md` files. The paths below are based on their official documentation, checked October 31, 2026. **This toolkit has not been tested in those apps.** Manual adjustments may be needed.
 
 | App | Status | Installation route |
 |---|---|---|
-| **OpenAI Codex** | **Primary · installation tested** | [Guided setup](https://benz4000.github.io/workflow-value-toolkit/) or [CLI, ZIP, and Git instructions](INSTALL.md#manual-installation) |
+| **OpenAI Codex** | **Primary · v1.0.1 local install tested** | [Guided setup](https://benz4000.github.io/workflow-value-toolkit/) or [CLI, ZIP, and Git instructions](INSTALL.md#manual-installation) |
 | Claude Code | Manual adaptation · untested | Skill folders in `.claude/skills/` |
 | Cursor | Manual adaptation · untested | Skill folders in `.cursor/skills/` |
 | GitHub Copilot in VS Code | Manual adaptation · untested | Skill folders in `.github/skills/` |
@@ -14,9 +14,11 @@ Claude Code, Cursor, GitHub Copilot in VS Code, and Gemini CLI document support 
 
 The Codex setup button, plugin package, and marketplace commands are for Codex. Other apps use the skill folders described below. Importing them does not add models, paid features, or Codex speed controls to another app.
 
+The v1.0.1 **Apply suggested settings / Keep current settings** choices also depend on host support. If clickable prompts or setting controls aren't available, the agent uses a plain question or manual instructions. Competitor compatibility does not imply automatic model switching.
+
 ## Before a manual import
 
-Download the [full ZIP](https://github.com/Benz4000/workflow-value-toolkit/releases/download/v1.0.0/workflow-value-toolkit-1.0.0.zip) and extract it, or check out tag `v1.0.0` from this repository. Inside the package, find `workflow-value-toolkit/skills/`.
+Download the [full ZIP](https://github.com/Benz4000/workflow-value-toolkit/releases/download/v1.0.1/workflow-value-toolkit-1.0.1.zip) and extract it, or check out tag `v1.0.1` from this repository. Inside the package, find `workflow-value-toolkit/skills/`.
 
 - Start with the complete `workflow-check` folder, including its `references` directory.
 - Preserve existing skill folders; don't overwrite a name collision without reviewing it.

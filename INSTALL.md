@@ -27,7 +27,7 @@ If the guided setup has trouble but your app supports local plugins, try the man
 Prefer the terminal? With a Codex CLI that supports plugins, install the published version directly:
 
 ```sh
-codex plugin marketplace add Benz4000/workflow-value-toolkit --ref v1.0.0 --json
+codex plugin marketplace add Benz4000/workflow-value-toolkit --ref v1.0.1 --json
 codex plugin add workflow-value-toolkit@workflow-value-local --json
 codex plugin list --json
 ```
@@ -36,6 +36,18 @@ The final command lets you verify that `workflow-value-toolkit@workflow-value-lo
 
 You can also use the full ZIP or a Git checkout below. These are Codex commands; for Claude Code, Cursor, GitHub Copilot, or Gemini CLI, use the [manual skill import guide](COMPATIBILITY.md).
 
+## Updating an existing installation
+
+Already have the toolkit? Paste this into a local Codex chat:
+
+```text
+Update Workflow Value Toolkit from https://github.com/Benz4000/workflow-value-toolkit to v1.0.1. Read INSTALL_FOR_CODEX.md in that repository and inspect my existing installation first. Preserve my other skills and settings, leave the direction check off, and verify the installed version before saying the update is complete.
+```
+
+Codex should check your installed version and source, then use the update controls your app actually supports. A marketplace refresh alone doesn't move an installation pinned to an older tag. If an update cannot be completed, keep the existing copy and use the explanation Codex provides. Don't register a second copy just to get past an error.
+
+For a standalone skill-folder installation, compare and update the existing `workflow-check` folder and its supporting files from v1.0.1, preserving any custom edits. Restart or open a new chat as your app requires.
+
 <details>
 <summary><strong>Manual ZIP install: download, extract, and run two commands</strong></summary>
 
@@ -43,9 +55,9 @@ This alternative requires a Codex CLI with local plugin marketplace support. You
 
 ## 1. Download and unpack
 
-Go to the [download page](https://github.com/Benz4000/workflow-value-toolkit/releases/latest) and choose **`workflow-value-toolkit-1.0.0.zip`** under **Assets**.
+Go to the [download page](https://github.com/Benz4000/workflow-value-toolkit/releases/latest) and choose **`workflow-value-toolkit-1.0.1.zip`** under **Assets**.
 
-Unzip it into a folder you plan to keep. Open the folder named **`workflow-value-toolkit-1.0.0`**. You should see `INSTALL.md` and a `workflow-value-toolkit` folder inside it.
+Unzip it into a folder you plan to keep. Open the folder named **`workflow-value-toolkit-1.0.1`**. You should see `INSTALL.md` and a `workflow-value-toolkit` folder inside it.
 
 Keep all the extracted files, including folders whose names start with a dot. Those contain the information Codex needs to find the toolkit. Choose the full ZIP above; the file ending in `-plugin.zip` is for other import methods.
 
@@ -79,7 +91,7 @@ Recommend a sensible AI setup. Keep costs down while making it clear and polishe
 Explain your choice in plain English.
 ```
 
-Codex should recommend an AI model, how much thinking the task needs, and a speed option. It should explain the choice and be clear about whether any setting actually changed.
+Codex should recommend an AI model, how much thinking the task needs, and a speed option. When a change is suggested, v1.0.1 offers **Apply suggested settings** or **Keep current settings** using clickable choices where supported. It explains any controls you need to change manually and confirms only settings it can verify.
 
 You can also find **workflow-check** under **Workflow Value Toolkit** in the skill picker. If you already have standalone copies of these skills, installation won't remove them; choose the copy you intend to use.
 
@@ -135,7 +147,7 @@ Adding this instruction does not activate the change-of-plan check.
 If you already use Git:
 
 ```sh
-git clone https://github.com/Benz4000/workflow-value-toolkit.git
+git clone --branch v1.0.1 --depth 1 https://github.com/Benz4000/workflow-value-toolkit.git
 cd workflow-value-toolkit
 codex plugin marketplace add .
 codex plugin add workflow-value-toolkit@workflow-value-local
@@ -147,4 +159,4 @@ For Claude Code, Cursor, GitHub Copilot, and Gemini CLI, see the [compatibility 
 
 [Back to the toolkit](README.md) · [Detailed usage guide](workflow-value-toolkit/README.md) · [Official skill documentation](https://learn.chatgpt.com/docs/build-skills)
 
-The setup button uses the [documented Codex link format](https://learn.chatgpt.com/docs/app/commands) to prepare a message. The [installation guide for Codex](INSTALL_FOR_CODEX.md) uses supported plugin commands. The command sequence was verified in an isolated Windows test profile on October 31, 2026; this does not guarantee every app version or managed account can install plugins.
+The setup button uses the [documented Codex link format](https://learn.chatgpt.com/docs/app/commands) to prepare a message. The [installation guide for Codex](INSTALL_FOR_CODEX.md) uses supported plugin commands. Version 1.0.1 was installed and enabled from a local repository in an isolated Windows profile on October 31, 2026. Remote installation pinned to v1.0.1, updates from an older version, and live interactive setting changes have not yet been tested.

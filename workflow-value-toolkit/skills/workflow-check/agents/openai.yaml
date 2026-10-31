@@ -1,6 +1,6 @@
 interface:
   display_name: "Workflow Check"
   short_description: "Choose model, effort, and speed for best value"
-  default_prompt: "Use $workflow-check to reevaluate this task's model, effort, and speed at the best-value point before diminishing returns."
+  default_prompt: "Use $workflow-check to recommend the best-value model, effort, and speed, then offer Apply suggested settings or Keep current settings."
 policy:
   allow_implicit_invocation: true

@@ -1,114 +1,119 @@
-# Workflow Value Toolkit: Codex Skills for Model Selection
+<p align="center">
+  <img src="assets/benz-workflow-banner.svg" alt="Benz Workflow Value Toolkit: better AI choices, less guesswork. Balance your budget, quality, and speed." width="100%">
+</p>
 
-Eight installable Codex skills for choosing an AI model, reasoning effort, and Standard, Fast, or Ultrafast speed. Compare cost, quality, and completion time, then choose a practical best-value configuration before diminishing returns.
+# Workflow Value Toolkit by Benz
 
-The default priority is **cost → quality → speed**. Required correctness, budgets, capabilities, and explicit deadlines remain constraints in every mode. Recommendations are provisional until task results support them; this package does not promise a measured optimum or guaranteed savings.
+**Get more from the AI you already use.**
 
-[Installation guide](INSTALL.md) · [Usage guide](workflow-value-toolkit/README.md) · [Releases](https://github.com/Benz4000/workflow-value-toolkit/releases) · [Report a problem](https://github.com/Benz4000/workflow-value-toolkit/issues)
+Writing a book. Planning a project. Getting an email out the door. Each job needs a different amount of care, time, and AI power.
 
-## Install in Codex
+This free toolkit helps **Codex recommend the right AI settings for your task**. Tell it what matters most: keeping costs down, getting a polished result, or finishing sooner. It weighs the options and explains its recommendation.
 
-Requires Git and a Codex client with local plugin marketplace support.
+You stay in control. Recommendations only become setting changes when your app supports that change and you have authorized it.
 
-```sh
-git clone https://github.com/Benz4000/workflow-value-toolkit.git
-cd workflow-value-toolkit
-codex plugin marketplace add .
-codex plugin add workflow-value-toolkit@workflow-value-local
-```
+**[Get the free toolkit →](https://github.com/Benz4000/workflow-value-toolkit/releases/latest)** &nbsp; · &nbsp; [Simple setup guide](INSTALL.md)
 
-Keep the cloned folder available for later refreshes. Start a new chat after installation. You can also download the install ZIP from [Releases](https://github.com/Benz4000/workflow-value-toolkit/releases), extract it, and run the two `codex plugin` commands in the folder containing `INSTALL.md`.
+*Made for Codex. Free to download and reuse under the MIT license. Your usual AI service charges still apply.*
 
-Installation adds the skills. It does not edit your `AGENTS.md`, change global model settings, or enable the direction detector. The shared `workflow-check` skill can be selected implicitly when relevant; the other seven skills require explicit invocation. See [installation details and the optional startup rule](INSTALL.md).
+## Put your budget where it matters
 
-## Quick start
+The biggest AI option can be more than a simple job needs. A cheaper option can also cost you time if you have to keep fixing the result.
 
-Ask for a best-value workflow:
+The toolkit looks for the sweet spot: enough capability to do the job well, with a reason for every step up in cost or speed.
+
+| What matters to you | How it helps |
+|---|---|
+| **“Make my budget go further.”** | Looks for a sensible setup that meets your needs, including the cost of retries and corrections. |
+| **“This needs to be good.”** | Gives quality more weight when the result needs extra care. |
+| **“I need this soon.”** | Checks whether paying for faster AI could actually help you finish sooner. |
+
+The default is **cost first, quality second, speed third**. The standard you need still matters in every mode.
+
+## Everyday jobs. Different priorities.
+
+These are examples of how to ask for advice about your setup:
+
+| You're working on… | Tell Codex… |
+|---|---|
+| A short customer email | “Keep this economical. It needs to be clear and friendly.” |
+| The final review of your book | “Quality comes first. Help me choose a setup for a careful review.” |
+| Product descriptions due this afternoon | “Time matters today. Help me balance speed with cost.” |
+| A project that just became more complicated | “The job has changed. Check whether the current setup still makes sense.” |
+
+## Try it on your next task
+
+After [installing the toolkit](INSTALL.md), paste this into a new Codex chat:
 
 ```text
 $workflow-check
-Choose a model, reasoning effort, and speed for formatting a long manuscript.
-Preserve the text and validate the rendered pages. Prioritize cost, quality, speed.
+I'm writing a short email to a customer.
+Recommend a sensible AI setup. Keep costs down while making it clear and polished.
+Explain your choice in plain English.
 ```
 
-Change the current task's priorities:
+Then describe your own job in place of the email. You can ask for more care, a lower cost, or a quicker result using ordinary language.
 
-```text
-$workflow-quality-cost-speed
-Reevaluate for a final publication review. Quality comes first.
-```
+You don't need to memorize the commands. You can also choose **workflow-check** from Codex's skill picker. A “skill” is simply a reusable set of instructions that helps Codex handle a particular job.
 
-Restore the default order:
+## Eight tools, one sensible starting point
 
-```text
-$workflow-check reset
-```
+Start with the main check. The other tools are there when you want more control.
 
-Use the host's skill picker if plugin skills are namespaced or the shorthand does not resolve.
-
-## All eight skills
-
-| Skill | What it does |
+| Included | What it gives you |
 |---|---|
-| [`workflow-check`](workflow-value-toolkit/skills/workflow-check/SKILL.md) | Evaluates model, reasoning effort, and speed; defaults to cost → quality → speed |
-| [`workflow-cost-quality-speed`](workflow-value-toolkit/skills/workflow-cost-quality-speed/SKILL.md) | Cost first, quality second, speed third |
-| [`workflow-cost-speed-quality`](workflow-value-toolkit/skills/workflow-cost-speed-quality/SKILL.md) | Cost first, speed second, quality third |
-| [`workflow-quality-cost-speed`](workflow-value-toolkit/skills/workflow-quality-cost-speed/SKILL.md) | Quality first, cost second, speed third |
-| [`workflow-quality-speed-cost`](workflow-value-toolkit/skills/workflow-quality-speed-cost/SKILL.md) | Quality first, speed second, cost third |
-| [`workflow-speed-cost-quality`](workflow-value-toolkit/skills/workflow-speed-cost-quality/SKILL.md) | Speed first, cost second, quality third |
-| [`workflow-speed-quality-cost`](workflow-value-toolkit/skills/workflow-speed-quality-cost/SKILL.md) | Speed first, quality second, cost third |
-| [`workflow-direction-check`](workflow-value-toolkit/skills/workflow-direction-check/SKILL.md) | Optional checks for meaningful changes in task direction during ordinary chat turns |
+| **One everyday check** | A recommendation for which AI to use, how much thinking the job needs, and whether extra speed is worth considering. |
+| **Six priority presets** | Every order of cost, quality, and speed. Pick what matters most, then what comes next. |
+| **One optional change-of-plan check** | As you chat, notices meaningful changes to the job and can suggest a fresh look at the setup. |
 
-Priority presets apply to the current task until changed. Explicit instructions in your request take precedence.
+<details>
+<summary><strong>See all six priority shortcuts</strong></summary>
 
-## Optional direction-change detection
+| Your order | Paste into Codex |
+|---|---|
+| Cost → quality → speed | `$workflow-cost-quality-speed` |
+| Cost → speed → quality | `$workflow-cost-speed-quality` |
+| Quality → cost → speed | `$workflow-quality-cost-speed` |
+| Quality → speed → cost | `$workflow-quality-speed-cost` |
+| Speed → cost → quality | `$workflow-speed-cost-quality` |
+| Speed → quality → cost | `$workflow-speed-quality-cost` |
+
+Use `$workflow-check reset` to return to the default. Your choice applies to the current task until you change it.
+
+</details>
+
+## Plans change. Your setup can be reconsidered.
+
+An outline becomes a finished book. A quick draft becomes something a client will see. A relaxed deadline moves to today.
+
+Turn on the optional change-of-plan check when you want help noticing those shifts:
 
 ```text
 $workflow-direction-check on
-$workflow-direction-check once
-$workflow-direction-check status
-$workflow-direction-check off
 ```
 
-`on` enables lightweight checks for the current chat. `once` checks without changing the remembered on/off preference. `status` reports that preference, and `off` stops the detector. Invoking the detector without a mode means `on`.
+It checks during your conversation and stays quiet when nothing meaningful changes. It does nothing while the chat is idle. It starts off and is only enabled when you ask for it in that chat.
 
-The detector looks for material changes in the objective, deliverable, priorities, constraints, task phase, or repeated diagnosed failures. It stays quiet for ordinary continuations and status questions. It runs as part of normal conversation reasoning: no idle polling, timer, extra model request, or background service. Context and reasoning still consume resources, and remembered state depends on the conversation context.
+Use `off` to stop it, `once` for a single check, or `status` to see the remembered setting. Like other AI instructions, it uses some context and reasoning; it is designed to keep that overhead small.
 
-Turning the detector off does not disable independent selection of `workflow-check`.
+## A few things to know
 
-## How model and effort selection works
+- **You need Codex with plugin support.** This is an add-on for Codex, not a standalone app or a general ChatGPT extension.
+- **The download is free.** Your Codex subscription, credits, and usage charges are separate.
+- **It recommends settings.** It cannot unlock paid models, add speed options to your account, or switch settings just by naming them.
+- **Results depend on the job.** The aim is better value; there is no guaranteed saving or universal best setting.
+- **Your preferences stay yours.** Installation doesn't rewrite your global settings or turn on the optional change-of-plan check.
 
-1. Identify the deliverable, quality requirements, budget, deadline, and available controls.
-2. Compare a small set of plausible model, reasoning-effort, and speed combinations.
-3. Exclude configurations that cannot satisfy the requirements.
-4. Consider total cost per accepted result, including retries and review, plus useful quality gains and end-to-end completion time.
-5. Stop upgrading when the next improvement is small relative to its added cost. Reevaluate when evidence or requirements change.
+## Ready for less guesswork?
 
-Standard is the value baseline where supported. Fast and Ultrafast are considered when model latency affects completion time; they cannot fix slow uploads or rendering. **Ultra reasoning and Ultrafast service are different controls.** Availability and pricing depend on the host, model, and account. Dated examples in the [selection guide](workflow-value-toolkit/skills/workflow-check/references/selection-guide.md) must be rechecked when relevant.
+**[Download Workflow Value Toolkit →](https://github.com/Benz4000/workflow-value-toolkit/releases/latest)**
 
-## Does this automatically switch models?
+Choose **`workflow-value-toolkit-1.0.0.zip`**, then follow the [setup guide](INSTALL.md). Start with one ordinary task and tell Codex what matters to you.
 
-No. These are instruction-based skills. They distinguish a recommendation, a requested setting, and a verified active setting. A host must expose a supported, authorized control before any setting can actually change. Installing a skill cannot create that capability.
+---
 
-## Example uses
+**Built by [Benz](https://github.com/Benz4000). AI made practical.**
 
-- **Book formatting:** preserve manuscript text and validate rendered pages while choosing an economical editing and review workflow.
-- **Routine code changes:** use a capable baseline and escalate effort for diagnosed difficult cases.
-- **Final quality review:** choose a quality-first preset while keeping cost and deadlines visible.
-- **Time-sensitive tasks:** compare speed tiers against the time spent in tools, rendering, and uploads.
+[Detailed guide](workflow-value-toolkit/README.md) · [AI model selection explained](workflow-value-toolkit/skills/workflow-check/references/selection-guide.md) · [Get help or suggest an improvement](https://github.com/Benz4000/workflow-value-toolkit/issues) · [MIT license](LICENSE)
 
-## Package contents and compatibility
-
-The installable plugin contains eight `SKILL.md` directories, UI metadata, a shared selection guide, manifests, an icon, and documentation. It has no MCP server, executable installation script, lifecycle hook, or API-key requirement. Model access and usage costs belong to the host service.
-
-`plugin.json` is the portable manifest; `.codex-plugin/plugin.json` supplies Codex compatibility metadata. The repository's `.agents/plugins/marketplace.json` registers the local plugin source. Other skill-capable hosts may import the eight directories, but their discovery and activation behavior must be checked separately.
-
-## Contributing
-
-Open an [issue](https://github.com/Benz4000/workflow-value-toolkit/issues) with the skill name, expected behavior, actual behavior, and a minimal example with private information removed. Useful improvements include clearer decision rules, verified compatibility fixes, and task evidence for model selection. Avoid unsupported savings claims or hard-coded assumptions about account access.
-
-## License
-
-[MIT](LICENSE). You may use, modify, and redistribute the package under the license terms.
-
-Maintained by [Benz4000](https://github.com/Benz4000). This is an independent project and is not affiliated with OpenAI.
+Independent project. Not affiliated with OpenAI.

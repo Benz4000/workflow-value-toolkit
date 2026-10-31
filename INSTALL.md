@@ -2,6 +2,8 @@
 
 Add the toolkit to Codex, then try it on a task you already have. The download is free; your usual Codex usage charges still apply.
 
+Choose [guided Codex setup](#easiest-let-codex-set-it-up), [manual installation](#manual-installation), or [compatibility and imports for other apps](COMPATIBILITY.md).
+
 ## Easiest: let Codex set it up
 
 **[Set up in Codex →](https://benz4000.github.io/workflow-value-toolkit/)**
@@ -19,6 +21,20 @@ This is a guided setup, not a silent installation. Opening the page or clicking 
 Use **Copy setup message** on the setup page, paste it into a local Codex chat, and press **Send**. If the browser blocks clipboard access, the message is shown on the page so you can select and copy it yourself.
 
 If the guided setup has trouble but your app supports local plugins, try the manual instructions below. If Codex reports that local plugin installation isn't supported, [ask for help](https://github.com/Benz4000/workflow-value-toolkit/issues). Managed accounts may require help from an administrator.
+
+## Manual installation
+
+Prefer the terminal? With a Codex CLI that supports plugins, install the published version directly:
+
+```sh
+codex plugin marketplace add Benz4000/workflow-value-toolkit --ref v1.0.0 --json
+codex plugin add workflow-value-toolkit@workflow-value-local --json
+codex plugin list --json
+```
+
+The final command lets you verify that `workflow-value-toolkit@workflow-value-local` is installed and enabled. Start a new chat after installation. If that marketplace name already points to a different source, resolve the conflict before adding it; don't replace an existing source blindly.
+
+You can also use the full ZIP or a Git checkout below. These are Codex commands; for Claude Code, Cursor, GitHub Copilot, or Gemini CLI, use the [manual skill import guide](COMPATIBILITY.md).
 
 <details>
 <summary><strong>Manual ZIP install: download, extract, and run two commands</strong></summary>
@@ -125,7 +141,7 @@ codex plugin marketplace add .
 codex plugin add workflow-value-toolkit@workflow-value-local
 ```
 
-Other apps that support agent skills may import the eight folders from `workflow-value-toolkit/skills`. Follow that app's own instructions; compatibility outside Codex has not been verified.
+For Claude Code, Cursor, GitHub Copilot, and Gemini CLI, see the [compatibility and manual skill import guide](COMPATIBILITY.md). Their skill-file support is documented, but this toolkit has not been tested in those apps.
 
 </details>
 

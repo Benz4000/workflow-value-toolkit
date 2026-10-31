@@ -12,7 +12,7 @@ This free toolkit helps **Codex recommend the right AI settings for your task**.
 
 You stay in control. Recommendations only become setting changes when your app supports that change and you have authorized it.
 
-**[Set up in Codex →](https://benz4000.github.io/workflow-value-toolkit/)** &nbsp; · &nbsp; [Setup help](INSTALL.md)
+**[Set up in Codex →](https://benz4000.github.io/workflow-value-toolkit/)** &nbsp; · &nbsp; [Manual install](INSTALL.md#manual-installation) &nbsp; · &nbsp; [Compatibility](COMPATIBILITY.md)
 
 Open the setup page, then click **Set up in Codex**. Press **Send**, approve setup if asked, then start a new chat. On supported local installations, Codex handles the commands for you.
 
@@ -98,9 +98,23 @@ It checks during your conversation and stays quiet when nothing meaningful chang
 
 Use `off` to stop it, `once` for a single check, or `status` to see the remembered setting. Like other AI instructions, it uses some context and reasoning; it is designed to keep that overhead small.
 
+## Codex first. Options for other AI tools.
+
+**Codex is the primary supported experience.** The installation was tested in an isolated Codex profile. Claude Code, Cursor, GitHub Copilot in VS Code, and Gemini CLI document support for skill files, so we include manual import guidance for them. This toolkit has not been tested in those four apps.
+
+| Your app | Toolkit status | Get started |
+|---|---|---|
+| **OpenAI Codex** | **Primary · installation tested** | [Guided setup](https://benz4000.github.io/workflow-value-toolkit/) or [manual install](INSTALL.md#manual-installation) |
+| Claude Code | Manual adaptation · toolkit untested | [Claude Code notes](COMPATIBILITY.md#claude-code) |
+| Cursor | Manual adaptation · toolkit untested | [Cursor notes](COMPATIBILITY.md#cursor) |
+| GitHub Copilot in VS Code | Manual adaptation · toolkit untested | [GitHub Copilot notes](COMPATIBILITY.md#github-copilot) |
+| Gemini CLI | Main check only suggested · untested | [Gemini CLI notes](COMPATIBILITY.md#gemini-cli) |
+
+Other apps can handle skill shortcuts and activation differently. Their available AI models and speed settings also differ. Check the [compatibility guide](COMPATIBILITY.md) before importing; the Codex setup button is only for Codex.
+
 ## A few things to know
 
-- **You need Codex with plugin support.** This is an add-on for Codex, not a standalone app or a general ChatGPT extension.
+- **Guided setup needs Codex with local plugin support.** Other apps use the manual skill paths above. This is not a standalone app or a general ChatGPT extension.
 - **The download is free.** Your Codex subscription, credits, and usage charges are separate.
 - **It recommends settings.** It cannot unlock paid models, add speed options to your account, or switch settings just by naming them.
 - **Results depend on the job.** The aim is better value; there is no guaranteed saving or universal best setting.

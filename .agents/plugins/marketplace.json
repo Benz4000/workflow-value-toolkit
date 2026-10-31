@@ -1,0 +1,12 @@
+{
+  "name": "workflow-value-local",
+  "interface": { "displayName": "Workflow Value Toolkit" },
+  "plugins": [
+    {
+      "name": "workflow-value-toolkit",
+      "source": { "source": "local", "path": "./workflow-value-toolkit" },
+      "policy": { "installation": "AVAILABLE", "authentication": "ON_INSTALL" },
+      "category": "Productivity"
+    }
+  ]
+}

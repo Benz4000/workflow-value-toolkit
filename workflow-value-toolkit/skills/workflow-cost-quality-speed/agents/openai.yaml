@@ -1,0 +1,8 @@
+interface:
+  display_name: "Cost → Quality → Speed"
+  short_description: "Recheck workflow: cost > quality > speed"
+  default_prompt: "Use $workflow-cost-quality-speed to recheck the current task's model, reasoning effort, and speed at the best-value point before diminishing returns."
+
+policy:
+  allow_implicit_invocation: false
+

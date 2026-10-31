@@ -1,0 +1,7 @@
+interface:
+  display_name: "Workflow Direction Check"
+  short_description: "Opt in to quiet checks for meaningful task changes"
+  default_prompt: "Use $workflow-direction-check on to notice meaningful direction changes in this chat and rerun workflow selection only when needed."
+
+policy:
+  allow_implicit_invocation: false

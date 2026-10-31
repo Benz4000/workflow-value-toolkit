@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Workflow Value Toolkit</title>
+  <rect width="128" height="128" rx="28" fill="#16345D"/>
+  <path d="M27 91V72M51 91V52M75 91V38M99 91V34" stroke="#7096CC" stroke-width="10" stroke-linecap="round"/>
+  <path d="M24 67L49 44L75 31L102 28" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="75" cy="31" r="10" fill="#64DFC3" stroke="#16345D" stroke-width="4"/>
+</svg>

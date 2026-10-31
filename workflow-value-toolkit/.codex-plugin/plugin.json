@@ -1,0 +1,25 @@
+{
+  "name": "workflow-value-toolkit",
+  "version": "1.0.0",
+  "description": "Eight skills for model, effort, and speed selection with configurable priorities and optional direction checks.",
+  "author": {
+    "name": "Benz4000"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Workflow Value Toolkit",
+    "shortDescription": "Model, effort, and speed value",
+    "longDescription": "Choose a practical model, reasoning effort, and speed configuration for the task. Includes a shared workflow check, all six orderings of cost, quality, and speed, and an explicitly activated direction-change check for the current chat. Reuses evidence, preserves required quality, and distinguishes recommendations from verified settings. No background service, polling, MCP connection, or automatic global-setting changes.",
+    "developerName": "Benz4000",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Choose the best-value model, reasoning effort, and speed for this task.",
+      "Reevaluate this workflow with quality first, cost second, and speed third.",
+      "Enable lightweight direction-change checks for this chat only."
+    ],
+    "brandColor": "#2457A7",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg"
+  }
+}
